@@ -1,0 +1,19 @@
+[project]
+name = "miniagent"
+version = "0.1.0"
+description = "一个手写的终端编码智能体：把上下文当作有限资源来管理"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0",
+]
+
+[project.scripts]
+miniagent = "miniagent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["miniagent*"]
